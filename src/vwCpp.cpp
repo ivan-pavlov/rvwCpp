@@ -39,7 +39,7 @@ int get_num_example(vw& all) {
 
 // [[Rcpp::export]]
 List vwCpp(std::string training_data, std::string validation_data, 
-           std::string validation_labels,std::string out_probs,std::string model,
+           std::string validation_labels,std::string out_probs = "preds.vw", std::string model = "mdl.vw",
            std::string loss = "logistic",std::string link_function = "logistic", 
            int b = 25, float learning_rate = 0.5, int passes = 1, bool do_evaluation = true) {
 
@@ -88,7 +88,6 @@ List vwCpp(std::string training_data, std::string validation_data,
     std::cout << "starting perf..." << std::endl;
 
     parse_output("which perf", path_to_perf);
-    std::cout << "at: " << path_to_perf  << std::endl;
     std::string tmp = path_to_perf + " -ROC -files " + validation_labels + " " + out_probs + " | cut -c8-14";
     std::cout << tmp << std::endl;
     parse_output(path_to_perf + " -ROC -files " + validation_labels + " " + out_probs + " | cut -c8-14", auc);

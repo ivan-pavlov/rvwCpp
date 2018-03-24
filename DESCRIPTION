@@ -8,4 +8,5 @@ Maintainer: Ivan Pavlov <pavlov.ivan095@gmail.com>
 Description: Basic test implementation of R interface for Vowpal Wabbit using Rcpp and libvw for GSoC 2018
 License: GPL (>= 2)
 Imports: Rcpp (>= 0.12.16)
+Suggests: rvw, ggplot2
 LinkingTo: Rcpp

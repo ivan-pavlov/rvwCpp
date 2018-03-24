@@ -16,3 +16,7 @@ Ivan Pavlov
 
 Maintainer: Ivan Pavlov <pavlov.ivan095@gmail.com>
 }
+\keyword{ package }
+\seealso{
+  \code{\link{vwCpp}}
+}
